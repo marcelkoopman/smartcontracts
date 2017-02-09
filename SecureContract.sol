@@ -1,8 +1,6 @@
 pragma solidity ^0.4.9;
 
-/**
- * Contract to store data in a secure manner.
- **/
+
 contract SecureData {
     
     uint data;
@@ -23,7 +21,8 @@ contract SecureData {
     }
     
     function verifyMsgSender() private {
-        if (msg.sender != creator) throw;
+        if (msg.sender != creator) 
+          throw;
     }
 }
 
