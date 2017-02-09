@@ -22,7 +22,7 @@ contract SecureData {
         return data; 
     }
     
-    function verifyMsgSender() {
+    function verifyMsgSender() private {
         if (msg.sender != creator) throw;
     }
 }
